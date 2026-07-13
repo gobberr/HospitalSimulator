@@ -3,6 +3,8 @@ package simulator.hospital;
 import simulator.hospital.enums.Drug;
 import simulator.hospital.enums.Condition;
 import java.util.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import simulator.hospital.parser.InputParser;
 import simulator.hospital.parser.OutputParser;
@@ -10,6 +12,7 @@ import simulator.hospital.processor.HospitalProcessor;
 
 public class Application {
 
+  private static final Logger logger = LoggerFactory.getLogger(Application.class);
   public static final String USAGE_MESSAGE = "Usage: java -jar target/EvooqHospitalSimulator-1.0-SNAPSHOT-jar-with-dependencies.jar [<patients>] [<drugs>]";
 
   public static void main(String[] args) {
@@ -24,7 +27,7 @@ public class Application {
     HospitalProcessor hospital = new HospitalProcessor();
     List<Condition> result = hospital.process(patients, drugs);
 
-    System.out.println(OutputParser.printPatients(result));
+    logger.info(OutputParser.printPatients(result));
   }
 
 }

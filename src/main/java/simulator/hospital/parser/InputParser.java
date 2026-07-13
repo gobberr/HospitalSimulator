@@ -11,6 +11,11 @@ import java.util.Set;
 
 public class InputParser {
 
+    private InputParser() {
+        /* This utility class should not be instantiated */
+    }
+
+
     public static List<Condition> parsePatients(String args) {
 
         List<Condition> patients = new ArrayList<>();

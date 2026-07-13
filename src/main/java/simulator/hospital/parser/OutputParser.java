@@ -1,5 +1,7 @@
 package simulator.hospital.parser;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import simulator.hospital.enums.Condition;
 
 import java.util.Arrays;
@@ -7,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class OutputParser {
 
     public static String printPatients(List<Condition> patients) {
