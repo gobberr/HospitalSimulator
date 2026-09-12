@@ -100,7 +100,7 @@
         <dependency>
             <groupId>org.sonarsource.java</groupId>
             <artifactId>sonar-java-plugin</artifactId>
-            <version>8.35.0.45121</version>
+            <version>8.43.0.47668</version>
             <scope>provided</scope>
         </dependency>
 
